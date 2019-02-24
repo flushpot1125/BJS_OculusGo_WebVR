@@ -70,31 +70,7 @@
             vrHelper.enableInteractions();
             vrHelper.gazeTrackerMesh = BABYLON.Mesh.CreateSphere("sphere1", 4, 0.1, scene);
             vrHelper.onControllerMeshLoaded.add((webVRController)=>{
-                
-                console.log("controller loaded");
-                try {
-                    webVRController.onTriggerStateChangedObservable.add((stateObject)=>{
-                    //    sphereMaterial.diffuseColor = new BABYLON.Color3(1, 1, 1);
-                      //  sphere.material = sphereMaterial;
-                        /*
-                        vrHelper.raySelectionPredicate = (mesh) => {
-                            if (mesh.name === "button") {
-                                // if sphere mesh is pressed, the code works, but exitVR() has an error.
-                            }
-                            return false;
-                        };
-                        */
-           
-                    });
-                    /*
-                    webVRController.onPadValuesChangedObservable.add((stateObject)=>{
-                        if (stateObject.y > -0.4) {
-                              // if pad of controller is touched, the code works, but exitVR() has an error.
-                        }
-                    });
-                    */
 
-                }catch(e) { console.error(e); }
             });
 
             sphere.actionManager = new BABYLON.ActionManager(scene);
